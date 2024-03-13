@@ -8,6 +8,8 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("colorscheme habamax")
 
+vim.cmd("set clipboard+=unnamedplus")
+
 --vim.cmd("highlight Normal guibg=none")
 --vim.cmd("highlight NonText guibg=none")
 --vim.cmd("highlight Normal ctermbg=none")
