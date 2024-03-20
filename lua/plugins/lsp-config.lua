@@ -19,7 +19,6 @@ return {
 					"graphql",
 					"jsonls",
 					"jdtls",
-					"marksmen",
 					"prismals",
 					"pyright",
 					"rust_analyzer",
@@ -41,7 +40,6 @@ return {
 			lspconfig.graphql.setup({})
 			lspconfig.jsonls.setup({})
 			lspconfig.jdtls.setup({})
-			lspconfig.marksmen.setup({})
 			lspconfig.prismals.setup({})
 			lspconfig.pyright.setup({})
 			--lspconfig.sqls.setup({})
