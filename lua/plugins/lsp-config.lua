@@ -19,11 +19,9 @@ return {
 					"graphql",
 					"jsonls",
 					"jdtls",
-					"marksmen",
 					"prismals",
 					"pyright",
 					"rust_analyzer",
-					"tailwindcss",
 				},
 			})
 		end,
@@ -41,12 +39,9 @@ return {
 			lspconfig.graphql.setup({})
 			lspconfig.jsonls.setup({})
 			lspconfig.jdtls.setup({})
-			lspconfig.marksmen.setup({})
 			lspconfig.prismals.setup({})
 			lspconfig.pyright.setup({})
-			--lspconfig.sqls.setup({})
 			lspconfig.rust_analyzer.setup({})
-			lspconfig.tailwindcss.setup({})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})

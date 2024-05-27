@@ -10,6 +10,8 @@ vim.cmd("colorscheme habamax")
 
 vim.cmd("set clipboard+=unnamedplus")
 
+vim.g.base16_colorspace = 256
+
 --vim.cmd("highlight Normal guibg=none")
 --vim.cmd("highlight NonText guibg=none")
 --vim.cmd("highlight Normal ctermbg=none")
