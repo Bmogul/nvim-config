@@ -12,7 +12,6 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver",
-					"html",
 					"clangd",
 					"cssls",
 					"dockerls",
@@ -33,7 +32,6 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.tsserver.setup({})
-			lspconfig.html.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.cssls.setup({})
 			lspconfig.dockerls.setup({})
