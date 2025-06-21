@@ -12,6 +12,13 @@ vim.cmd("set clipboard+=unnamedplus")
 
 vim.g.base16_colorspace = 256
 
+vim.api.nvim_set_keymap('n', 'I', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+
+
+vim.keymap.set('n', 'K', function()
+  vim.diagnostic.setqflist()
+  vim.cmd('copen')
+end, { noremap = true, silent = true })
 --vim.cmd("highlight Normal guibg=none")
 --vim.cmd("highlight NonText guibg=none")
 --vim.cmd("highlight Normal ctermbg=none")

@@ -11,7 +11,6 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver",
           "clangd",
           "cssls",
           "dockerls",
@@ -31,7 +30,6 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
       lspconfig.clangd.setup({})
       lspconfig.cssls.setup({})
       lspconfig.dockerls.setup({})
@@ -48,6 +46,15 @@ return {
       lspconfig.pyright.setup({})
       lspconfig.rust_analyzer.setup({})
       lspconfig.gopls.setup({})
+
+      lspconfig.dartls.setup({
+        settings = {
+          dart = {
+            completeFunctionCalls = true,
+            showTodos = true,
+          },
+        },
+      })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
