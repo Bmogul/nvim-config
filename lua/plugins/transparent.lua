@@ -12,7 +12,9 @@ local function setup_transparent()
             'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
             'EndOfBuffer',
         },
-        extra_groups = {}, -- Additional groups that should be cleared
+        extra_groups = {
+            'NeoTreeNormal', 'NeoTreeNormalNC', 'NeoTreeEndOfBuffer',
+        }, -- Additional groups that should be cleared
         exclude_groups = {}, -- Groups you don't want to clear
     })
 end

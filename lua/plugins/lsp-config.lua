@@ -22,6 +22,7 @@ return {
           "pyright",
           "rust_analyzer",
           "gopls",
+          "dartls",
         },
       })
     end,
@@ -54,15 +55,7 @@ return {
       lspconfig.pyright.setup({ capabilities = capabilities })
       lspconfig.rust_analyzer.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
-      lspconfig.dartls.setup({
-        capabilities = capabilities,
-        settings = {
-          dart = {
-            completeFunctionCalls = true,
-            showTodos = true,
-          },
-        },
-      })
+      -- dartls is managed by flutter-tools.nvim
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

@@ -9,17 +9,16 @@ return {
   },
   ft = { "dart" },
   config = function()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
     require("flutter-tools").setup({
       lsp = {
-        on_attach = function(_, bufnr)
-          local buf_map = function(mode, lhs, rhs, desc)
-            vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
-          end
-
-          -- Code actions (like wrap with Column/Row/etc.)
-          buf_map("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
-          buf_map("v", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
-        end,
+        capabilities = capabilities,
+        settings = {
+          dart = {
+            completeFunctionCalls = true,
+            showTodos = true,
+          },
+        },
       },
     })
   end,

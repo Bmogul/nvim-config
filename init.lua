@@ -13,3 +13,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-opts")
 require("lazy").setup("plugins")
+
+vim.cmd("colorscheme tokyonight-night")
